@@ -15,6 +15,10 @@ html {
   background: var(--document-bg);
 }
 
+body {
+  margin-top: 0;
+}
+
 /* Utilities */
 .flex {
   display: flex;
