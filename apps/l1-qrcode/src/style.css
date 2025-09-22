@@ -1,0 +1,96 @@
+:root {
+  --document-bg: #D5E1EF;
+  --card-bg: #FFFFFF;
+  --card-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
+  --card-inner-width: 288px;
+  --text-slate-0: #1F314F;
+  --text-slate-1: #68778D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--document-bg);
+}
+
+/* Utilities */
+.flex {
+  display: flex;
+}
+
+:where(.flex).flex-col {
+  flex-direction: column;
+}
+
+.text-outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+/* Content */
+.container {
+  width: 100%;
+  height: 100svh;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  padding-inline: 16px;
+  padding-block: 16px 40px;
+  border-radius: 20px;
+  height: fit-content;
+  gap: 24px;
+}
+
+.qrcode {
+  width: var(--card-inner-width);
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-copy {
+  max-width: var(--card-inner-width);
+  gap: 16px;
+  padding-inline: 16px;
+  text-align: center;
+}
+
+.card-copy :where(h1, p) {
+  margin: 0;
+}
+
+.card-copy h1 {
+  font-size: 22px;
+  line-height: 26.4px;
+  color: var(--text-slate-0);
+}
+
+.card-copy p {
+  font-size: 15px;
+  line-height: 21px;
+  color: var(--text-slate-1);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
