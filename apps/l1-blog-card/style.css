@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Figtree", sans-serif;
+  --color-*: initial;
+  --color-yellow: #F4D04E;
+  --color-gray-500: #6B6B6B;
+  --color-gray-950: #111111;
+  --color-white: #FFFFFF;
+}
+
+@layer components {
+  .text-preset-1 {
+    font-size: clamp(var(--text-xl), 2vw, var(--text-2xl));
+    line-height: 150%;
+  }
+
+  .text-preset-2 {
+    font-size: clamp(var(--text-sm), 2vw, var(--text-base));
+    line-height: 150%;
+  }
+
+  .text-preset-3 {
+    font-size: clamp(var(--text-xs), 2vw, var(--text-sm));
+    line-height: 150%;
+  }
+}
